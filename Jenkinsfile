@@ -14,12 +14,12 @@ pipeline{
     }
     stage('Build'){
       steps{
-      dir('my-app') { // Adjust if the POM is in a subdirectory
+     // Adjust if the POM is in a subdirectory
         
             bat 'mvn clean package'
         }
     }
-     }
+     
     stage('SonarQube Analysis'){
    environment{
        SONAR_TOKEN=credentials('sonarqube-token')
