@@ -15,6 +15,7 @@ pipeline{
     stage('Build'){
       steps{
       dir('my-app') { // Adjust if the POM is in a subdirectory
+        
             bat 'mvn clean package'
         }
     }
