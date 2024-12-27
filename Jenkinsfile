@@ -31,7 +31,7 @@ pipeline{
        set PATH=%JAVA_PATH%;
        set PATH=%MAVEN_HOME%\\bin;%PATH%;
        
-       mvn clean verify sonar:sonar -Dsonar.projectKey=mavendemo -Dsonar.projectName='mavendemo' -Dsonar.source=src -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}
+       mvn clean verify sonar:sonar -Dsonar.projectKey=mavendemo -Dsonar.projectName='mavendemo' -Dsonar.source=. -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}
        '''
    }
   }
